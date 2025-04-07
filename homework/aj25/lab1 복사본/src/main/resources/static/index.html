@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab01-32207522-양상훈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="title-container">
+    <img id="disaster-image" class="main-image" src="images/natural-disaster.jpg">
+  </div>
+
+  <h1 id="title" class="main-title">Natural Disaster Archive</h1>
+
+  <div class="container">
+    <div class="nav">
+		<h3 id="volcano">Volcano</h3>  <!-- 클릭 시 volcano.csv 로드 -->
+		<h3 id="tornado">Tornado</h3>  <!-- 클릭 시 tornado.csv 로드 -->
+		<h3 id="typhoon">Typhoon</h3>  <!-- 클릭 시 typhoon.csv 로드 -->
+		<h3 id="tsunami">Tsunami</h3>  <!-- 클릭 시 tsunami.csv 로드 -->
+    </div>
+
+	<h3 class="table-title"></h3>  <!-- 재해 제목을 표시 -->
+    <table>
+      <thead>
+        <!-- 동적으로 채워질 테이블 헤더 -->
+      </thead>
+      <tbody class="tbody">
+        <!-- 동적으로 채워질 테이블 데이터 -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

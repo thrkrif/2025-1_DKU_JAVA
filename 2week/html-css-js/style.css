@@ -1,0 +1,48 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.nav{
+	display: flex;
+	flex-direction: row;
+	width:50%;
+	justify-content: space-between;
+}
+h1{
+	color: blue;
+}
+h3{
+	cursor: pointer;
+}
+.focus{
+	color: green;
+}
+table {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	margin : 20px 10px;
+}
+th {
+	width: 147px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #153d73;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+td {
+	width: 349px;
+	padding: 10px;
+	vertical-align: top;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.hidden{
+	display: none;
+}

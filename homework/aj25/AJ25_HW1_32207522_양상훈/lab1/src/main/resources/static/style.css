@@ -1,0 +1,65 @@
+.container{
+	display: flex;
+	flex-direction: column; /* 위 -> 아래 정렬 */
+	justify-content: center; /* flex-direction: column 이므로 세로 방향 + 가운데 정렬 */
+	align-items: center; /* flex-direction: column 이므로 가로 방향 + 가운데 정렬 */
+}
+.nav{
+	display: flex;
+	flex-direction: row;
+	width:50%; /* 부모 요소, 혹은 화면 전체의 너비의 절반*/
+	justify-content: space-between; /* 가로 방향 + 여백으로 요소들 나열 */
+}
+.main-image{
+	width: 100%;       /* 부모(container)에 맞춰 꽉 채움 */
+  	max-width: 600px;  /* 최대 너비 제한 */
+  	height: auto;      /* 가로 크기에 맞춰 비율 자동 조정 */
+  	display: block;    /* 이미지가 줄 하나 다 차지하게 만들기 */
+  	margin: 0 auto;    /* 이미지가 가운데로 정렬됨. display: block과 세트로 자주 씀 */
+}
+.main-title{
+	font-size: 2em;
+  	margin-top: 10px;
+  	margin-bottom: 0;
+  	text-align: center;
+}
+h1{
+	color: blue;
+}
+h3{
+	cursor: pointer;
+}
+.focus{
+	color: green;
+}
+table{
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	margin : 20px 10px;
+}
+
+th{
+	background-color: #f2f2f2; /* 밝은 회색 배경 */
+	width: 147px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #153d73;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+td{
+	width: 349px;
+	padding: 10px;
+	vertical-align: top;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+.hidden{
+	display: none;
+}
