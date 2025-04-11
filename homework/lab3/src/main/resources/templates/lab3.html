@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab03-32207522-양상훈</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="container">
+        <!-- 기본 이미지 -->
+        <img id="disaster-image" class="main-image" src="/images/natural-disaster.jpg" />
+    
+        <h1 class="main-title" id="title">
+            Natural Disaster Archive
+        </h1>
+    </div>
+    
+    <div class="container">
+    <nav>
+        <a th:href="@{/volcano}">🌋Volcano</a> |
+        <a th:href="@{/earthquake}">🏚️Earthquake</a>
+        <a th:href="@{/tsunami}">🌊Tsunami</a>
+    </nav>  
+    </div>
+</body>
+</html>

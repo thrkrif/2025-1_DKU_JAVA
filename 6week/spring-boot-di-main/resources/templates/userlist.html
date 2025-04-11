@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>List of LoginUser</title>
+</head>
+<body>
+	<!-- content -->
+	<div class="bg-dark text-white p-5">
+		<div align="center">
+			<h2>List of LoginUser</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>loginId</td>
+						<td>password</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user: ${userList}">
+						<td th:text="${user.loginId}" />
+						<td th:text="${user.password}" />
+					</tr>
+				</tbody>	
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>

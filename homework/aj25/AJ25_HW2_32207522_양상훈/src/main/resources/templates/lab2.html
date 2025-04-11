@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab02-32207522-양상훈</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="container">
+
+        <!-- class 식별자는 CSS에서 스타일 지정할 때 쓰는 이름이다 -->
+        <!-- volcano 이미지 -->
+        <img id="disaster-image" class="main-image" th:if="${type == 'volcano'}" src="/images/volcano.jpg" />
+    
+        <!-- earthquake 이미지 -->
+        <img id="disaster-image" class="main-image" th:if="${type == 'earthquake'}" src="/images/earthquake.jpg" />
+    
+        <!-- 기본 이미지 -->
+        <img id="disaster-image" class="main-image" th:if="${type != 'volcano' and type != 'earthquake'}" src="/images/natural-disaster.jpg" />
+    
+        <h1 class="main-title" id="title">
+            <a th:href="@{/}" class="main-title-link">Natural Disaster Archive</a>
+        </h1>
+    </div>
+    
+    <div class="container">
+    <nav>
+        <a th:href="@{/list/volcano}">🌋Volcano</a> |
+        <a th:href="@{/list/earthquake}">🏚️Earthquake</a>
+    </nav>
+    </div>
+    <div th:if="${type == 'volcano'}">
+        <h2>🌋Volcano Activity</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th><th>AlertLevel</th><th>Date</th><th>ColorCode</th><th>Detail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${data}">
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.alertLevel}"></td>
+                <td th:text="${item.date}"></td>
+                <td th:text="${item.colorCode}"></td>
+                <td>
+                    <a th:href="@{/detail(
+                        type=${type}, 
+                        url=${item.url},
+                        name=${item.name}, 
+                        date=${item.date},
+                        alertLevel=${item.alertLevel}, 
+                        colorCode=${item.colorCode}
+                    )}">Detail
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div th:if="${type == 'earthquake'}">
+        <h2>🏚️2020-2025 Magnitude 5+ Earthquakes</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Place</th><th>Magnitude</th><th>Time</th><th>Detail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${data}">
+                <td th:text="${item.place}"></td>
+                <td th:text="${item.magnitude}"></td>
+                <td th:text="${item.time}"></td>
+                <td>
+                    <a th:href="@{/detail(
+                    type=${type},
+                    url=${item.url},
+                    place=${item.place},
+                    date=${item.time},
+                    magnitude=${item.magnitude}
+                )}">Detail</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
